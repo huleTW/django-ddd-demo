@@ -1,6 +1,6 @@
-from domain.rootcause import algorithm
-from domain.rootcause.sample import Sample
-from infrastructure.sample import edoc as repo
+from domains.rootcauses import algorithm
+from domains.rootcauses.sample import Sample
+from infrastructures.samples import edoc as repo
 
 
 def get_by_id(sample_id):

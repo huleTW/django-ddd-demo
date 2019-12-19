@@ -2,7 +2,7 @@ import json
 
 from django.http import JsonResponse
 
-from domain.rootcause import sample_domain_service as sample_service
+from domains.rootcauses import sample_domain_service as sample_service
 
 
 def sample(request):

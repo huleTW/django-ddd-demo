@@ -1,5 +1,5 @@
-from domain.rootcause.sample import Sample
-from infrastructure.sample.sample_models import SampleData
+from domains.rootcauses.sample import Sample
+from infrastructures.samples.sample_models import SampleData
 
 edoc_path = "/path"
 

@@ -1,3 +1,30 @@
+## 代码结构
+
+```
+exceptionhandler/
+    manage.py
+    apis/                               -- add dispatch here
+        sample_apis.py
+    applications/                       -- add user case here, it will handle multi aggregate root cooperation
+        sample_user_case.py    
+    domains/
+        rootcases/                      -- aggregate
+            sample.py                   -- aggregate root
+            algorithm.py                -- entity
+            sample_domain_service.py    -- domain service
+    infrastructures/                    -- infrastructure
+        samples/
+            edoc.py                     -- add upload/download specific implimentation
+            sample_modules.py           -- add db CRUD specific implimentation
+    exceptionhandler/                   -- main root
+        __init__.py
+        settings.py
+        urls.py
+        asgi.py
+        wsgi.py
+```
+
+
 ## 测试策略
 
 * 使用独立的测试setting文件
