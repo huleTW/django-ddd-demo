@@ -5,7 +5,7 @@ from django.http import HttpRequest, QueryDict
 from stubserver import StubServer
 
 from application.sample_user_case import mark_sample, create_sample
-from infrastructure.sample.models import SampleData
+from infrastructure.sample.sample_models import SampleData
 
 
 class MyTestCase(unittest.TestCase):

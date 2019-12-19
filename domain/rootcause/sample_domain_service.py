@@ -1,17 +1,18 @@
-from domain.rootcause import sample_repository, algorithm
+from domain.rootcause import algorithm
 from domain.rootcause.sample import Sample
+from infrastructure.sample import edoc as repo
 
 
 def get_by_id(sample_id):
-    return sample_repository.get_by_id(sample_id)
+    return repo.query_from_edoc(sample_id)
 
 
 def update(sample):
-    return sample_repository.update(sample)
+    return repo.update(sample)
 
 
 def save(sample_id):
     if algorithm.analysis("analysis content"):
-        return sample_repository.save(Sample(algorithm.rest_call(sample_id)))
+        return repo.save(Sample(algorithm.rest_call(sample_id)))
     else:
         return Sample("invalid")
