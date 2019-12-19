@@ -1,4 +1,4 @@
-from domain.rootcause import sample_repository
+from domain.rootcause import sample_repository, algorithm
 from domain.rootcause.sample import Sample
 
 
@@ -11,4 +11,7 @@ def update(sample):
 
 
 def save(sample_id):
-    return sample_repository.save(Sample(sample_id))
+    if algorithm.analysis("analysis content"):
+        return sample_repository.save(Sample(algorithm.rest_call(sample_id)))
+    else:
+        return Sample("invalid")
