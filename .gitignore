@@ -1,3 +1,6 @@
 .idea
 db.sqlite3
 db-test.sqlite3
+*/__pycache__
+*.iml
+*.DS_Store
